@@ -49,5 +49,6 @@ jobs:
         run: |
           echo $APP_NAME
           echo $PACK_NAME
+          echo $github.sha
           echo test, and deploy your project.
 

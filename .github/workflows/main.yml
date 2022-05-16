@@ -2,7 +2,7 @@ name: Test_Action
 
 env:
   APP_NAME: MyApp
-  PACK_NAME: "App_version-$({github.sha})"
+  PACK_NAME: "App_version-$(github.sha)"
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -43,12 +43,16 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
       
+      # Runs a single command using the runners shell
+      - name: Run ls -la
+        run: ls -la
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo $APP_NAME
           echo $PACK_NAME
-          echo $({github.sha})
+          echo $(github.sha)
+          echo ${github.sha}
           echo test, and deploy your project.
 

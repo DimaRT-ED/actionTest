@@ -56,5 +56,6 @@ jobs:
           echo $APP_NAME
           echo $PACK_NAME
           echo git_sha-${{github.sha}}
+          echo GITHUB_REPOSITORY-$GITHUB_REPOSITORY
           echo test, and deploy your project.
 

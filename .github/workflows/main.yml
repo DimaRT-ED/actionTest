@@ -1,17 +1,14 @@
 name: Test_Action
 
-
 env:
   APP_NAME: MyApp
-  PACK_NAME: App_version-${{ github.repository }}
+  PACK_NAME: Repo_name-${{ github.repository }}
   
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [master]
 
 jobs:
   # This workflow contains a single job called "build"
